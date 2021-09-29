@@ -1,0 +1,294 @@
+.post-item-container {
+    padding: 1.5rem;
+    --spacing: 1.5rem;
+    --columns: 4;
+    box-shadow: 0 1px 2px #dfe2e5;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.post-item-container h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.post-item-container .post-item-top img {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #cccccc;
+}
+img.profile-avatar,
+img.no-avatar {
+    object-fit: cover;
+    background-color: #ccc;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+img.no-avatar {
+    background-color: #cccccc;
+}
+.post-item-top {
+    display: flex;
+}
+.post-item-top-info .user-name {
+    color: var(--grey-title);
+    font-weight: var(--fw-medium);
+    font-size: 1rem;
+    cursor: pointer;
+}
+.post-item-body {
+    margin: 1rem 0;
+}
+.post-item-body .post-item-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--spacing));
+    padding: 1.5rem 0;
+}
+@media screen and (max-width: 1023px) {
+    .post-item-body .post-item-images {
+        --columns: 2;
+    }
+}
+@media screen and (max-width: 767px) {
+    .post-item-body .post-item-images {
+        --spacing: 15px;
+        --columns: 1;
+    }
+}
+.post-item-images .layout-item {
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: calc(calc(100% / var(--columns) - var(--spacing)));
+    margin-left: var(--spacing);
+    cursor: pointer;
+}
+
+.post-item-images .layout-item .layout-image {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.post-submit-btn {
+    margin-top: 1rem;
+}
+
+.mt-primary {
+    margin-top: 1rem;
+}
+.img-url-item {
+    display: flex;
+}
+.img-url-item button {
+    height: calc(100% - 16px);
+    width: 3.5rem;
+    background: transparent !important;
+    color: #b11e1e !important;
+    flex-shrink: 0;
+}
+.img-url-item .field {
+    flex: 1;
+}
+.img-url-item i.x.icon {
+    font-size: 20px;
+}
+.images-light-box-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.images-light-box-container img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.btn-close-modal {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+}
+.nav-btn svg,
+.btn-close-modal svg {
+    color: white !important;
+}
+.nav-btn {
+    font-size: 4rem;
+}
+.btn-close-modal {
+    font-size: 2rem;
+}
+.nav-btn.nav-btn-left {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+.nav-btn.nav-btn-right {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+input.input-comment {
+    border-radius: 18px;
+}
+.img-comment-user-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+    object-fit: cover;
+    position: relative;
+}
+div.image-container {
+    flex-shrink: 0;
+}
+div.img-container::before {
+    position: absolute;
+    bottom: 1px;
+    left: 30px;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #34a034;
+    border-radius: 50%;
+    z-index: 2;
+    border: 2px solid white;
+}
+.comment-container {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 1rem;
+    color: black;
+}
+.comment-container img.no-avatar {
+    background-color: #cccccc;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+    object-fit: cover;
+}
+
+.image-container {
+    /* line-height: 0;
+    -webkit-column-count: 5;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 5;
+    -moz-column-gap: 0px;
+    column-count: 5;
+    column-gap: 10px; */
+    display: grid;
+    grid-template-areas:
+        "header header header header header header"
+        "menu main main main right right"
+        "menu footer footer footer footer footer";
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+div.image-container img {
+    border-radius: 1rem;
+}
+
+div.background-container {
+    margin-bottom: auto;
+    width: 100%;
+    background-image: linear-gradient(grey, white);
+}
+img.background-img {
+    height: 430px;
+    width: 100%;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+div.img-profile-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -125px;
+    margin-bottom: 1rem;
+}
+img.img-profile {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    position: relative;
+    box-shadow: 0 0 0 5px hsl(0, 0%, 80%), 0 0 0 10px white;
+}
+div.img-block {
+    position: relative;
+}
+div.camera-icon {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    transform: translate(-20%, -40%);
+    width: 3rem;
+    height: 3rem;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+div.name-bo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0.5rem;
+    padding-bottom: 1rem;
+}
+div.name-bo h3 {
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
+div.name-bo h4 {
+    color: #888383;
+    text-transform: capitalize;
+    font-size: 1.0625rem;
+    font-weight: 200;
+    margin: 0.4rem 0;
+}
+.name-bo a.edit-info {
+    font-size: 1.3rem;
+}
+ul.menu-homepage {
+    display: flex;
+    list-style-type: none;
+}
+.background-container {
+    padding: 0 var(--padding-background);
+}
+ul.menu-homepage > li {
+    margin-right: 1.6rem;
+    font-size: 1.3rem;
+}
+div.list-item {
+    padding: 1.5rem 0;
+    border-top: 1px solid #ccc;
+    background-color: #ffffff;
+    padding: 1.6rem var(--padding-background);
+}
+div.personal-posts {
+    padding: 1rem var(--padding-background);
+}
